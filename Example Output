@@ -1,0 +1,29 @@
+# Connecting to a NetApp Clustered Data ONTAP system and running the 'cluster show' and 'network interface show' commands
+
+*** cluster show ***
+
+Node                  Health  Eligibility
+--------------------- ------- ------------
+CLUS-01               true    true
+CLUS-02               true    true
+2 entries were displayed.
+
+
+*** network interface show ***
+
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+CLUS
+            cluster_mgmt up/up    10.255.144.21/25   CLUS-02       e0M     false
+CLUS-01
+            clus1        up/up    169.254.47.26/16   CLUS-01       e0e     true
+            clus2        up/up    169.254.206.171/16 CLUS-01       e0f     true
+            mgmt1        up/up    10.255.144.22/25   CLUS-01       e0M     true
+CLUS-02
+            clus1        up/up    169.254.141.37/16  CLUS-02       e0e     true
+            clus2        up/up    169.254.41.36/16   CLUS-02       e0f     true
+            mgmt1        up/up    10.255.144.19/25   CLUS-02       e0M     true
+CLUS-03
+            clus03       up/up    10.255.144.12/25   CLUS-02       a0a     true
+8 entries were displayed.
