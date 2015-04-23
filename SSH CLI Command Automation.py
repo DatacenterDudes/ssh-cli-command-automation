@@ -11,7 +11,9 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect('$host_ip', username='$username', password='$password')
 
 #Example cli_commands = ['cluster show', 'network interface show']
-cli_commands = ['$cli_command_1', '$cli_command_2', '$etc']
+cli_commands = ['$cli_command_1',
+                '$cli_command_2',
+                '$etc']
 
 #Function to execute commands
 def run_command(command):
